@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriMonic-Entertainment</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li id="0" id="0" class="logo"><img src="image/PriMonic.jpg" alter="Logo">PriMonic </li>
+            <li class="list">Home</li>
+            <li class="list"><a href="about.html" target="_blank" style="text-decoration: none; color:#fff">About</a></li>
+            <li class="self"><img src="image/PrinceS.jpg"></li>
+    </nav>
+    <div class="container">
+        <div class="songList">
+            <h1>Music Factory for You..</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="1">
+                    <span class="songName">Chak Lein De</span> 
+                    <span class="songlistplay"><span class="timestamp">04:22 <i id="0" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/2.jpg" alt="2">
+                    <span class="songName">Dangal Song</span> 
+                    <span class="songlistplay"><span class="timestamp">05:07 <i id="1" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/3.jpg" alt="3">
+                    <span class="songName">Dhaakad Dangal</span> 
+                    <span class="songlistplay"><span class="timestamp">02:28 <i id="2" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/4.jpg" alt="4">
+                    <span class="songName">Kar Har Maidan</span> 
+                    <span class="songlistplay"><span class="timestamp">03:31 <i id="3" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/5.jpg" alt="5">
+                    <span class="songName">Kyun Tarasta Hai</span> 
+                    <span class="songlistplay"><span class="timestamp">06:34 <i id="4" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/6.jpg" alt="6">
+                    <span class="songName">Main Lad Jana</span> 
+                    <span class="songlistplay"><span class="timestamp">03:34 <i id="5" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/7.jpg" alt="7">
+                    <span class="songName">O Sikander</span> 
+                    <span class="songlistplay"><span class="timestamp">04:50 <i id="6" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/8.jpg" alt="8">
+                    <span >Paagal Parindey</span> 
+                    <span class="songlistplay"><span class="timestamp">06:28 <i id="7" class="far songItemPlay fa-1x fa-circle-play"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+    <div class="bottom">
+        <input type="range" name="progress" id="progressControl" min="0" value="0" max="100">
+        <div class="icons">
+            <!--fontawesome icons-->
+            <i class="fa-solid fa-3x fa-backward-step" id="previous"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i id="masterPlay" class="fa-regular fa-3x fa-circle-play"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-3x fa-forward-step" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="G/5uwq.gif" width="100px" alt="3" id="gif">
+            <span id="masterSongName">&nbsp;&nbsp;Chak
+        </div>
+    </div>
+
+<div class="bottom">
+    <div class="progress-container">
+        <div class="time-display">
+            <span id="currentTime">0:00</span><b> /</b>
+            <span id="totalDuration">0:00</span>
+        </div>
+    </div>
+    <div class="vol">
+        <input type="range" name="volume" id="volumeControl" min="0" max="1" step="0.1" value="1">
+        <span><i class="fas fa-volume-up"></i></span>&nbsp;&nbsp;
+        <!-- <i class="fa-solid fa-volume-xmark"></i> -->
+    </div>
+<!-- Add a microphone icon for voice control -->
+<button id="voice-control"><i class="fa-solid fa-microphone"></i></button>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&display=swap');
+body{
+    background-color: antiquewhite;
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+nav{
+    font-family: 'Ubuntu', sans-serif;
+
+}
+#voice-control:hover{
+    cursor: pointer;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+nav ul li{
+    padding: 0 20px ;
+    align-items: center;
+    cursor: pointer;
+}
+.list:hover{
+    background-color: #b31160;
+}
+.self img{
+    width: 50px; /* Adjust the width of the image as needed */
+    height:60px; /* Maintain the aspect ratio */
+    margin-left: 1000px;
+    border-radius: 55%;
+}
+.logo img{
+    width: 68px;
+    padding: 2px;
+}
+h1 {
+  font-size: 50px;
+  background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff8c00, #ff2e96);
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    text-align: center;
+  }
+.container{
+    min-height: 60vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round',sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 90%;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 34px;
+    background-image: url('image/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+  }
+.bottom{
+    position: sticky;
+    height: 80px;
+    background-color: rgb(32, 36, 37);
+    display: flex;
+    color: rgb(14, 164, 181);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icons{
+    margin-top: 14px;
+}
+.icons i{
+    cursor: pointer;
+}
+.vol{
+    cursor: pointer;
+}
+#volumeControl{
+    cursor: pointer;
+
+}
+#progressControl{
+    width: 80vw;
+    cursor: pointer;
+}
+.bottom1{
+    position: absolute;
+    left: 20vw;
+
+}
+#gif{
+    width: 150px;
+    height: auto;
+}
+#masterSongName{
+    display: row;
+    font-size: 20px;
+    padding: 0 10px;
+}
+.vol{
+    position: absolute;
+    right: 10vw;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: rgb(45, 164, 244);
+    color: rgb(187, 22, 22);
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 35px;
+}
+.songItemContainer{
+    margin-top: 14px;
+}
+.songItem Img{
+    width: 30px;
+    margin: 0 23px;
+    border-radius: 35px;
+
+}
+.time-display{
+    float: left;
+}
+.timestamp{
+    margin-left: 0px;
+    margin-right: 23px;
+    
+}
+.timestamp i{
+    cursor: pointer;
+}
+.songInfo{
+    position: absolute;
+    left: 13vw;
+    height: 20px;
+
+}
+.songInfo Img{
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+</style>
+    <script src="https://kit.fontawesome.com/416d05158f.js" crossorigin="anonymous"></script>
+    <script>
+        console.log("Welcome to Your Music Player");
+
+    // Initialize the variables
+    let songIndex = 0;
+    let audioElement = new Audio();
+    let masterPlay = document.getElementById('masterPlay');
+    let myProgressBar = document.getElementById('myProgressBar');
+    let gif = document.getElementById('gif');
+    let masterSongName = document.getElementById('masterSongName');
+    let songItems = Array.from(document.getElementsByClassName('songItem'));
+
+    let songs = [
+        {songName: "Chak Lein De", filePath: "songs/Chak.mp3", coverPath: "covers/1.jpg"},
+        {songName: "Dangal", filePath: "songs/Dangal.mp3", coverPath: "covers/2.jpg"},
+        {songName: "Dhaakad", filePath: "songs/Dhaakad.mp3", coverPath: "covers/3.jpg"},
+        {songName: "Kar Har Maidan", filePath: "songs/Kar.mp3", coverPath: "covers/4.jpg"},
+        {songName: "Kyu Tarasta", filePath: "songs/kyu.mp3", coverPath: "covers/5.jpg"},
+        {songName: "Main Lad Jana", filePath: "songs/Main.mp3", coverPath: "covers/6.jpg"},
+        {songName: "O Sikander", filePath: "songs/O.mp3", coverPath: "covers/7.jpg"},
+        {songName: "Paagal Parindey", filePath: "songs/Paagal.mp3", coverPath: "covers/8.jpg"},
+    ];
+
+    // Function to play selected song
+    const playSong = (index) => {
+        audioElement.src = songs[index].filePath;
+        masterSongName.innerText = songs[index].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-circle-play');
+        masterPlay.classList.add('fa-circle-pause');
+        
+    };
+
+    // Function to make all plays inactive
+    const makeAllPlays = () => {
+        songItems.forEach((element) => {
+            element.querySelector('.songItemPlay').classList.remove('fa-circle-pause');
+            element.querySelector('.songItemPlay').classList.add('fa-circle-play');
+        });
+    };
+
+    // Event listeners for play/pause click
+    masterPlay.addEventListener('click', () => {
+        if (audioElement.paused || audioElement.currentTime <= 0) {
+            playSong(songIndex);
+        } else {
+            audioElement.pause();
+            masterPlay.classList.remove('fa-circle-pause');
+            masterPlay.classList.add('fa-circle-play');
+            gif.style.opacity = 0;
+        }
+    });
+
+    // Event listeners for song item click
+    songItems.forEach((element, i) => {
+        element.addEventListener('click', () => {
+            makeAllPlays();
+            songIndex = i;
+            element.querySelector('.songItemPlay').classList.remove('fa-circle-play');
+            element.querySelector('.songItemPlay').classList.add('fa-circle-pause');
+            playSong(songIndex);
+        });
+    });
+
+    // Event listener for next button
+    document.getElementById('next').addEventListener('click', () => {
+        if (songIndex < songs.length - 1) {
+            songIndex++;
+        } else {
+            songIndex = 0;
+        }
+        playSong(songIndex);
+    });
+
+    // Event listener for previous button
+    document.getElementById('previous').addEventListener('click', () => {
+        if (songIndex > 0) {
+            songIndex--;
+        } else {
+            songIndex = songs.length - 1;
+        }
+        playSong(songIndex);
+    });
+    // Additional enhancements
+
+// Volume control
+let volumeControl = document.getElementById('volumeControl');
+audioElement.volume = volumeControl.value;
+
+volumeControl.addEventListener('input', () => {
+    audioElement.volume = volumeControl.value;
+});
+
+// Song progress display
+let currentTimeDisplay = document.getElementById('currentTime');
+let totalDurationDisplay = document.getElementById('totalDuration');
+let progressControl = document.getElementById('progressControl');
+
+audioElement.addEventListener('timeupdate', () => {
+    let currentTime = audioElement.currentTime;
+    let totalDuration = audioElement.duration;
+
+    currentTimeDisplay.innerText = formatTime(currentTime);
+    totalDurationDisplay.innerText = formatTime(totalDuration);
+
+    let progress = (currentTime / totalDuration) * 100;
+    progressControl.value = progress;
+});
+
+progressControl.addEventListener('input', () => {
+    audioElement.currentTime = (progressControl.value / 100) * audioElement.duration;
+});
+
+// Repeat functionality
+let repeatButton = document.getElementById('repeat');
+let repeatMode = 'none'; // 'none', 'all', 'one'
+
+repeatButton.addEventListener('click', () => {
+    switch (repeatMode) {
+        case 'none':
+            repeatButton.classList.add('active');
+            repeatMode = 'all';
+            break;
+        case 'all':
+            repeatButton.classList.remove('active');
+            repeatMode = 'one';
+            break;
+        case 'one':
+            repeatButton.classList.remove('active');
+            repeatMode = 'none';
+            break;
+    }
+});
+
+audioElement.addEventListener('ended', () => {
+    if (repeatMode === 'one') {
+        playSong(songIndex);
+    } else if (repeatMode === 'all') {
+        playNext();
+    }
+});
+
+// Function to format time in MM:SS format
+function formatTime(timeInSeconds) {
+    let minutes = Math.floor(timeInSeconds / 60);
+    let seconds = Math.floor(timeInSeconds % 60);
+    return `${minutes}:${(seconds < 10 ? '0' : '')}${seconds}`;
+}
+
+    // Event listener for time update
+    audioElement.addEventListener('timeupdate', () => {
+        // Update seekbar
+        let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+        myProgressBar.value = progress;
+    });
+
+    // Event listener for seekbar change
+    myProgressBar.addEventListener('change', () => {
+        audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
+    });
+
+    </script>
+</body>
+</html>
